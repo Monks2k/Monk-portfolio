@@ -1,3 +1,4 @@
+de
 /* Basic styling for portfolio */
 
 body {
@@ -44,7 +45,7 @@ nav ul li a:hover {
 
 section {
     padding: 2rem;
-    max-width: 800px;
+    max-width: 95%;
     margin: 0 auto;
     background-color: #fff;
     margin-bottom: 1rem;
@@ -53,7 +54,7 @@ section {
 }
 
 #about {
-    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80');
+    background-image: url('dope.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -78,7 +79,7 @@ section {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #0756b1f5;
+    background-color: #6fdeecf5;
     color: #0c0b0b;
     /* Remove fixed positioning to make footer moveable */
     position: static;
@@ -89,6 +90,7 @@ footer {
 .social-icons {
     margin: 0.5rem 0;
 }
+
 
 .social-icons a {
     display: inline-block;
@@ -102,7 +104,122 @@ footer {
 
 .social-icons svg {
     vertical-align: middle;
-    fill: #fff;
+    fill: #000000; /* Universal black color for social media icons */
     width: 24px;
     height: 24px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+/* Hide the slides by default */
+.slide {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Project content styling */
+.project-content h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0.5rem;
+    margin-top: -22px;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(255,255,255,0.8);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(200,200,200,0.8);
+}
+
+/* Navigation dots container */
+.dots-container {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Navigation dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Improve slide content styling */
+.project-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.project-content img {
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-image {
+    max-width: 200px;
+    height: auto;
+    margin: 1rem auto 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
